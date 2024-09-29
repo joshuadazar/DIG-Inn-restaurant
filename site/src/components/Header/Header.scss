@@ -1,15 +1,23 @@
 
 .header {
-  align-items: center;
-  background: $black;
-  display: flex;
-  font-family: 'Flama-Medium' !important;
-  height: 103.5px;
-  justify-content: space-between;
   padding: 6vw;
   width: 100%;
+  background: $black;
+  top:0;
+  z-index:2;
 
-  &-logo {
+  @include from(desktop) {
+    padding: 21.5px 40px;
+  }
+  .wrapper {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    font-family: 'Flama-Medium';
+    justify-content: space-between;
+    width: 100%;
+
+    .header-logo {
     display: flex;
     img {
       width: auto;
@@ -18,18 +26,24 @@
     }
   }
 
-  &-menu {
+  .header-menu {
     .desktop-only {
       display: flex;
       gap: 1.4vw;
       list-style: none;
+      align-items: center;
 
       li> a {
         text-decoration: none;
         backface-visibility: hidden;
         padding: .1em 0;
         color: $white;
+        font-size: 16px;
+      }
+      .btn {
+        @include button($white, $black);
       }
     }
+  }
   }
 }

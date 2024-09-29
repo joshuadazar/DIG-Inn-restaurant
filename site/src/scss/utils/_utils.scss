@@ -1,0 +1,9 @@
+@mixin button ($bg-color: $white, $text-color: $black){
+  padding: 20.8px;
+  background-color: $bg-color;
+  border-radius: 6.4px ;
+  color: $text-color;
+  text-decoration: none;
+  font-family: "Flama-Medium";
+  font-size: 14px;
+}
