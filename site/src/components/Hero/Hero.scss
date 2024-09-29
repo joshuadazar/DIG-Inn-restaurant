@@ -32,24 +32,7 @@
     }
 
     .btn {
-      @extend %generic-fontsize-cta;
-      padding: 18px 50px;
-      background-color: $yellow;
-      border: none;
-      border-radius: 5px;
-      color: $black;
-      text-decoration: none;
-      display: inline-block;
-      text-align: center;
-      cursor: pointer;
-      
-      @include upto(mobile) {
-        padding: 1rem;
-      }
-
-      &:hover {
-        background-color: rgb(208.3, 144.2733606557, 0);
-      }
+      @include btn-yellow();
     }
   }
 

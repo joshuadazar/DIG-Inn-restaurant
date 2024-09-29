@@ -7,3 +7,25 @@
   font-family: "Flama-Medium";
   font-size: 14px;
 }
+
+@mixin btn-yellow($bg-color: $yellow, $text-color: $black){
+  @extend %generic-fontsize-cta;
+  padding: 18px 50px;
+  background-color: $bg-color;
+  border: none;
+  border-radius: 5px;
+  color: $text-color;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  
+  @include upto(mobile) {
+    padding: 1rem;
+  }
+
+  &:hover {
+    background-color: rgb(208.3, 144.2733606557, 0);
+  }
+    
+}

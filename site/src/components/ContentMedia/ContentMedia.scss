@@ -1,0 +1,113 @@
+.fundraising-container {
+  background-color: #fff;
+  padding: 80px 84px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+  .fundraising-header {
+    text-align: center;
+  
+    .heading {
+      @extend %generic-fontsize-h2;
+      font-family: "FlamaSemicondensed-Semibold";
+      color: $black;
+    }
+    .subheading {
+      @extend %generic-fontsize-p;
+      font-family: "Flama-Medium";
+      line-height: 28px;
+      color: $black;
+      padding-top: 10px;
+    }
+  }
+
+  .fundraising-stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+    
+    @include upto(desktop) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap:2rem;
+    }
+
+
+    .stat {
+      text-align: center;
+      width: 290px;
+
+      .value {
+        @extend %generic-fontsize-xl;
+        font-family: "FlamaSemicondensed-Semibold";
+        color: $green;
+      }
+
+      .description {
+        @extend %generic-fontsize-p;
+        padding-top: 10px;
+        font-family: "FlamaSemicondensed-Semibold";
+      }
+    }
+  }
+
+  //
+  .fundraising-info {
+    display: flex;
+    height: 500px;
+    align-items: center;
+
+    @include upto(desktop) {
+      flex-direction: column-reverse;
+    }
+
+    .cta-section {
+      flex:1;
+
+      @include upto(desktop) {
+        text-align: center;
+      }
+
+      .heading {
+        @extend %generic-fontsize-h2;
+        font-family: "FlamaSemicondensed-Semibold";
+        color: $black;
+      }
+
+      .subheading {
+        @extend %generic-fontsize-p;
+        padding-top: 30px;
+      }
+
+      .btn {
+        margin-top: 30px;
+        @include btn-yellow();
+      }
+
+      .fundraising-footer {
+        margin-top: 30px;
+
+        a {
+          color: $black;
+          text-decoration: underline;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .asset-section {
+      flex: 1;
+      background-image: url(/image/assetSection.webp);
+      background-size: contain; 
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      
+    }
+  }
+}
+
+

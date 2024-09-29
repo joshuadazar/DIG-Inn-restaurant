@@ -1,0 +1,82 @@
+.how-it-works {
+    background: $white-dig;
+    padding: 80px;
+    text-align: center;
+
+    @include from(tablet){
+      padding: 80px 137px;
+    }
+
+    .section-header {
+      margin-bottom: 20px;
+
+      .heading {
+        @extend %generic-fontsize-h2;
+        font-family: "FlamaSemicondensed-Semibold";
+        color: $green;
+      }
+
+      .subheading {
+        @extend %generic-fontsize-p;
+        font-family: "Flama-Medium";
+        padding-top: 20px;
+      }
+    }
+
+    .steps-container {
+      display: flex;
+      justify-content: space-between;
+      margin:  91px 0;
+
+      .step {
+        flex: 1;
+        margin: 10px;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap:20px;
+        width: 200px;
+
+        img {
+          width: 108px;
+          height: 108px;
+          margin-bottom: 10px;
+        }
+
+        h3 {
+          color: $green;
+          font-family: "FlamaSemicondensed-Semibold";
+          @extend %generic-fontsize-p;
+        }
+
+        p {
+          color: $black;
+          font-family: "Flama-Medium";
+          font-size: 18px;
+        }
+      }
+    }
+
+    .call-to-action {
+      .btn {
+        margin-top: 30px;
+        @include btn-yellow();
+      }
+    }
+}
+
+// Responsive adjustments
+@include upto(desktop) {
+  .steps-container {
+    flex-direction: column;
+    align-items: center;
+
+    .step {
+        margin-bottom: 20px;
+    }
+  }
+}

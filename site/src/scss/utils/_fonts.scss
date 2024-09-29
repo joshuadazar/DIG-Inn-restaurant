@@ -19,6 +19,27 @@
   font-style: normal;
 }
 
+// Font sizes xl
+$fontsize-mobile-xl: 30px;
+$fontsize-tablet-xl: 50px;
+$fontsize-desktop-xl: 82px;
+$fontsize-desktop-xxl-xl: 82px;
+
+$sizing-xl: (
+  "mobile": $fontsize-mobile-xl,
+  "tablet": $fontsize-tablet-xl,
+  "desktop": $fontsize-desktop-xl,
+  "desktop-xxl": $fontsize-desktop-xxl-xl,
+);
+
+%generic-fontsize-xl {
+  @each $name, $value in $sizing-xl {
+    @include from($name) {
+      font-size: $value;
+    }
+  }
+}
+
 // Font sizes h1
 $fontsize-mobile-h1: 30px;
 $fontsize-tablet-h1: 50px;
@@ -40,10 +61,31 @@ $sizing-h1: (
   }
 }
 
+// Font sizes h2
+$fontsize-mobile-h2: 25px;
+$fontsize-tablet-h2: 30px;
+$fontsize-desktop-h2: 40px;
+$fontsize-desktop-xxl-h2: 40px;
+
+$sizing-h2: (
+  "mobile": $fontsize-mobile-h2,
+  "tablet": $fontsize-tablet-h2,
+  "desktop": $fontsize-desktop-h2,
+  "desktop-xxl": $fontsize-desktop-xxl-h2,
+);
+
+%generic-fontsize-h2 {
+  @each $name, $value in $sizing-h2 {
+    @include from($name) {
+      font-size: $value;
+    }
+  }
+}
+
 // Font sizes paragraph
 $fontsize-mobile-p: 16px;
 $fontsize-tablet-p: 18px;
-$fontsize-desktop-p: 20px;
+$fontsize-desktop-p: 22px;
 $fontsize-desktop-xxl-p: 22px;
 
 $sizing-p: (

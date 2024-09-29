@@ -1,9 +1,23 @@
 @import "./utils/index.scss";
 @import "../components/Header/Header.scss";
 @import "../components/Hero/Hero.scss";
+@import "../components/ContentMedia/ContentMedia.scss";
+@import "../components/CardList/CardList.scss";
 
 html {
   font-family: "Flama-Medium";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+p {
+  margin: 0;
 }
 
 body {
