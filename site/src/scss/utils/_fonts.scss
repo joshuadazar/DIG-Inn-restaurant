@@ -18,3 +18,67 @@
   font-weight: normal;
   font-style: normal;
 }
+
+// Font sizes h1
+$fontsize-mobile-h1: 30px;
+$fontsize-tablet-h1: 50px;
+$fontsize-desktop-h1: 60px;
+$fontsize-desktop-xxl-h1: 60px;
+
+$sizing-h1: (
+  "mobile": $fontsize-mobile-h1,
+  "tablet": $fontsize-tablet-h1,
+  "desktop": $fontsize-desktop-h1,
+  "desktop-xxl": $fontsize-desktop-xxl-h1,
+);
+
+%generic-fontsize-h1 {
+  @each $name, $value in $sizing-h1 {
+    @include from($name) {
+      font-size: $value;
+    }
+  }
+}
+
+// Font sizes paragraph
+$fontsize-mobile-p: 16px;
+$fontsize-tablet-p: 18px;
+$fontsize-desktop-p: 20px;
+$fontsize-desktop-xxl-p: 22px;
+
+$sizing-p: (
+  "mobile": $fontsize-mobile-p,
+  "tablet": $fontsize-tablet-p,
+  "desktop": $fontsize-desktop-p,
+  "desktop-xxl": $fontsize-desktop-xxl-p,
+);
+
+%generic-fontsize-p {
+  @each $name, $value in $sizing-p {
+    @include from($name) {
+      font-size: $value;
+    }
+  }
+}
+
+// Font sizes cta
+$fontsize-mobile-cta: 16px;
+$fontsize-tablet-cta: 18px;
+$fontsize-desktop-cta: 20px;
+$fontsize-desktop-xxl-cta: 20px;
+
+$sizing-cta: (
+  "mobile": $fontsize-mobile-cta,
+  "tablet": $fontsize-tablet-cta,
+  "desktop": $fontsize-desktop-cta,
+  "desktop-xxl": $fontsize-desktop-xxl-cta,
+);
+
+%generic-fontsize-cta {
+  font-family: "FlamaSemicondensed-Semibold";
+  @each $name, $value in $sizing-cta {
+    @include from($name) {
+      font-size: $value;
+    }
+  }
+}

@@ -1,13 +1,12 @@
 
 .header {
   padding: 6vw;
-  width: 100%;
   background: $black;
   top:0;
   z-index:2;
 
   @include from(desktop) {
-    padding: 21.5px 40px;
+    padding: 1.5vw 3vw;
   }
   .wrapper {
     align-items: center;
@@ -33,6 +32,11 @@
       list-style: none;
       align-items: center;
 
+      @include upto(tablet) {
+        display: none;
+      }
+
+
       li> a {
         text-decoration: none;
         backface-visibility: hidden;
@@ -42,6 +46,10 @@
       }
       .btn {
         @include button($white, $black);
+
+        &:hover {
+          background-color: $grey;
+        }
       }
     }
   }
