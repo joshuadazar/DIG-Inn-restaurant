@@ -27,6 +27,36 @@
         <li><a href="/contact">Contact</a></li>
         <a class="btn" href="/order">ORDER&nbsp;NOW</a>
       </ul>
+      <button id="openMenu" class="menu-button" aria-label="Open menu">
+        ⚌
+      </button>
     </nav>
   </div>
 </header>
+
+<div class="menu-modal" id="menuModal">
+  <button id="closeMenu" class="close-button" aria-label="Close menu">
+    &#10005;
+  </button>
+  <ul class="menu-list">
+    <li><a href="/menu">Menu</a></li>
+    <li><a href="/merch">Merch</a></li>
+    <li><a href="/locations">Locations</a></li>
+    <li><a href="/catering">Catering</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+  <a href="#" class="order-button">ORDER NOW</a>
+</div>
+
+<script>
+  const openMenu = document.querySelector("#openMenu");
+  const closeMenu = document.querySelector("#closeMenu");
+  const modal = document.getElementById("menuModal");
+
+  openMenu.addEventListener("click", () => toggleMenu());
+  closeMenu.addEventListener("click", () => toggleMenu());
+
+  function toggleMenu() {
+    modal.classList.toggle("open");
+  }
+</script>

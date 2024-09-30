@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 80px;
+    padding: 40px;
     text-align: center;
 
     @include from(desktop){
@@ -14,33 +14,34 @@
     .slides {
         display: flex;
         overflow: hidden;
+
         .slide {
-            min-width: 100%;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
+          min-width: 100%;
+          opacity: 0;
+          transition: opacity 0.5s ease;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 30px;
 
-            &.active {
-                opacity: 1;
-            }
+          &.active {
+              opacity: 1;
+          }
 
-            .review {
-              font-size: 25px;
-              font-family: "Flama-Basic";
-            }
+          .review {
+            font-size: 25px;
+            font-family: "Flama-Basic";
+          }
 
-            .description {
-              font-family: "Flama-Medium";
-              font-size: 18px;
-            }
+          .description {
+            font-family: "Flama-Medium";
+            font-size: 18px;
+          }
 
-            .reviewer {
-              font-size: 16px;
-              font-family: "Flama-Basic";
-            }
+          .reviewer {
+            font-size: 16px;
+            font-family: "Flama-Basic";
+          }
         }
     }
     .navigation {
