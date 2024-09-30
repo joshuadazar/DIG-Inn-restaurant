@@ -4,11 +4,16 @@
   background: $black;
   top:0;
   z-index:2;
-  position: fixed;
-  width: 90vw;
+  
+
+  @include upto(tablet){
+    position: fixed;
+    width: 90vw;
+  }
 
   @include from(desktop) {
     padding: 1.5vw 3vw;
+    position: relative;
   }
   .wrapper {
     align-items: center;
