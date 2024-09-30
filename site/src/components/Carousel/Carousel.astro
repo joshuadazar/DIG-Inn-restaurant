@@ -1,0 +1,107 @@
+<div class="carousel">
+  <div class="slides">
+    <div class="slide active">
+      <p class="stars">
+        <img src="/image/star.svg" alt="star" />
+        <img src="/image/star.svg" alt="star" />
+        <img src="/image/star.svg" alt="star" />
+        <img src="/image/star.svg" alt="star" />
+        <img src="/image/star.svg" alt="star" />
+      </p>
+      <p class="review">REVIEW NUMBER 1 ABOUT THE FUNDRAISING</p>
+      <p class="description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        volutpat viverra lorem, eu interdum leo rutrum eget. Curabitur malesuada
+        dui sed risus malesuada tempor.
+      </p>
+      <p class="reviewer">Name of the person 1</p>
+    </div>
+    <div class="slide">
+      <p class="stars">
+        <img src="/image/star.svg" alt="star" />
+        <img src="/image/star.svg" alt="star" />
+        <img src="/image/star.svg" alt="star" />
+        <img src="/image/star.svg" alt="star" />
+      </p>
+      <p class="review">REVIEW NUMBER 2 ABOUT THE FUNDRAISING</p>
+      <p class="description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        volutpat viverra lorem, eu interdum leo rutrum eget. Curabitur malesuada
+        dui sed risus malesuada tempor.
+      </p>
+      <p class="reviewer">Name of the person 2</p>
+    </div>
+    <div class="slide">
+      <p class="stars">
+        <img src="/image/star.svg" alt="star" />
+        <img src="/image/star.svg" alt="star" />
+        <img src="/image/star.svg" alt="star" />
+        <img src="/image/star.svg" alt="star" />
+        <img src="/image/star.svg" alt="star" />
+      </p>
+      <p class="review">REVIEW NUMBER 3 ABOUT THE FUNDRAISING</p>
+      <p class="description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        volutpat viverra lorem, eu interdum leo rutrum eget. Curabitur malesuada
+        dui sed risus malesuada tempor.
+      </p>
+      <p class="reviewer">Name of the person 3</p>
+    </div>
+    <div class="slide">
+      <p class="stars">
+        <img src="/image/star.svg" alt="star" />
+        <img src="/image/star.svg" alt="star" />
+        <img src="/image/star.svg" alt="star" />
+        <img src="/image/star.svg" alt="star" />
+      </p>
+      <p class="review">REVIEW NUMBER 4 ABOUT THE FUNDRAISING</p>
+      <p class="description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        volutpat viverra lorem, eu interdum leo rutrum eget. Curabitur malesuada
+        dui sed risus malesuada tempor.
+      </p>
+      <p class="reviewer">Name of the person 4</p>
+    </div>
+    <!-- Replicate this div for additional slides -->
+  </div>
+  <div class="navigation">
+    <!-- Generate these spans dynamically based on the number of slides -->
+    <span class="dot active" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+</div>
+
+<script>
+  let slideIndex = 0;
+
+  function showSlides() {
+    let slides = Array.from(
+      document.getElementsByClassName("slide")
+    ) as HTMLElement[];
+    let dots = Array.from(
+      document.getElementsByClassName("dot")
+    ) as HTMLElement[];
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      slides[i].classList.remove("active");
+      dots[i].classList.remove("active");
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "flex";
+    slides[slideIndex - 1].classList.add("active");
+    dots[slideIndex - 1].classList.add("active");
+    setTimeout(showSlides, 6000);
+  }
+
+  function currentSlide(n: number) {
+    slideIndex = n - 1;
+    showSlides();
+  }
+
+  document.addEventListener("DOMContentLoaded", showSlides);
+</script>

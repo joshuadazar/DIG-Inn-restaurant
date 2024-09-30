@@ -1,0 +1,64 @@
+.carousel {
+    position: relative;
+    background: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 80px;
+    text-align: center;
+
+    @include from(desktop){
+      padding: 80px 400px;
+    }
+
+    .slides {
+        display: flex;
+        overflow: hidden;
+        .slide {
+            min-width: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+
+            &.active {
+                opacity: 1;
+            }
+
+            .review {
+              font-size: 25px;
+              font-family: "Flama-Basic";
+            }
+
+            .description {
+              font-family: "Flama-Medium";
+              font-size: 18px;
+            }
+
+            .reviewer {
+              font-size: 16px;
+              font-family: "Flama-Basic";
+            }
+        }
+    }
+    .navigation {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            &.active {
+                background-color: #717171;
+            }
+        }
+    }
+}
