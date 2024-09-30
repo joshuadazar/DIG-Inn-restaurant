@@ -4,6 +4,8 @@
   background: $black;
   top:0;
   z-index:2;
+  position: fixed;
+  width: 90vw;
 
   @include from(desktop) {
     padding: 1.5vw 3vw;
@@ -98,7 +100,7 @@
     border: none;
     cursor: pointer;
     position: absolute;
-    top: 10px;
+    top: 10vh;
     right: 20px;
     height: 64px;
   }
